@@ -1,0 +1,21 @@
+/* Empty. Add your own CSS if you like */
+
+
+.card {
+  boder : 0px;
+
+}
+
+.bg-orange {
+   background: #f19224;
+   border : 0px;
+   margin : 0px;
+   color : white;
+}
+
+.bg-blue {
+   background :#8cc3e9;
+   border : 0px;
+   margin : 0px;
+   color : white;
+}
