@@ -1,21 +1,39 @@
 /* Empty. Add your own CSS if you like */
 
+a {
+    text-decoration: none;
+    color : white;
+}
+a:hover {
+    text-decoration: none;
+}
+
 
 .card {
   boder : 0px;
 
 }
 
+
+.button-big {
+  border : 0px;
+  margin : 0px;
+  height : 100px;
+  color : white;
+}
+
 .bg-orange {
    background: #f19224;
-   border : 0px;
-   margin : 0px;
-   color : white;
 }
 
 .bg-blue {
    background :#8cc3e9;
-   border : 0px;
-   margin : 0px;
-   color : white;
+}
+
+.bg-yellow {
+   background : #e2bc2a;
+}
+
+.bg-green {
+   background : #759e34;
 }

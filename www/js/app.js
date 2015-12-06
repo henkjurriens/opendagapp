@@ -41,6 +41,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.lyceum', {
+    url: '/lyceum',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/schools/lyceum.html'
+      }
+    }
+  })
+
+  .state('app.about', {
+    url: '/about',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/about.html'
+      }
+    }
+  })
+
   .state('app.browse', {
       url: '/browse',
       views: {
