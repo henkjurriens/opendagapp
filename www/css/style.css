@@ -35,5 +35,13 @@ a:hover {
 }
 
 .bg-green {
-   background : #759e34;
+   background : #b3c027;
+}
+
+.bg-purple {
+   background : #ab539b;
+}
+
+.bg-red {
+   background : #e10f2a;
 }
