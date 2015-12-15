@@ -37,22 +37,22 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: 'templates/schools.html',
-        controller: 'AppCtrl'
+        controller: 'OpleidingenCtrl'
       }
     }
   })
 
-  .state('app.opleidingengymnasium', {
-    url: '/opleidingen/gymnasium',
+  .state('app.gymnasium', {
+      url: '/opleidingen/gymnasium',
     views: {
       'menuContent': {
         templateUrl: 'templates/opleidingen/gymnasium.html',
-        controller: 'AppCtrl'
+        controller: 'OpleidingenCtrl'
       }
     }
   })
 
-  .state('app.opleidingenvwoplus', {
+  .state('app.vwoplus', {
     url: '/opleidingen/vwoplus',
     views: {
       'menuContent': {

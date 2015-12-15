@@ -76,5 +76,9 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('OpleidingenCtrl', function($scope, $location, $stateParams) {
+  $scope.go = function(opleiding) {
+    console.log('click');
+    $location.url(opleiding);
+  }
 });
