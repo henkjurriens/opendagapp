@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.opendagapp649334" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>opendagApp</name>
+  <name>StadEnEsch</name>
   <description>
-        An Ionic Framework and Cordova project.
+        An app for Stad en Esch Open Day
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="henk.jurriens@gmail.com" href="www.appenzo.nl">
+      App en Zo Team
     </author>
   <content src="index.html"/>
   <access origin="*"/>

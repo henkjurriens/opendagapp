@@ -62,6 +62,16 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
     }
   })
 
+  .state('app.havovwo', {
+    url: '/opleidingen/havovwo',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/opleidingen/havovwo.html',
+        controller: 'AppCtrl'
+      }
+    }
+  })
+
   .state('app.lyceum', {
     url: '/lyceum',
     views: {
@@ -76,6 +86,15 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: 'templates/about.html'
+      }
+    }
+  })
+
+  .state('app.update', {
+    url: '/update',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/update.html'
       }
     }
   })
