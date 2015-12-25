@@ -32,12 +32,59 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
+
+
   .state('app.schools', {
     url: '/schools',
     views: {
       'menuContent': {
         templateUrl: 'templates/schools.html',
         controller: 'OpleidingenCtrl'
+      }
+    }
+  })
+
+  .state('app.lyceum', {
+    url: '/lyceum',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/schools/lyceum.html'
+      }
+    }
+  })
+
+  .state('app.beroepencollege', {
+    url: '/beroepencollege',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/schools/beroepencollege.html'
+      }
+    }
+  })
+
+  .state('app.praktijkschool', {
+    url: '/praktijkschool',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/schools/praktijkschool.html'
+      }
+    }
+  })
+
+  .state('app.hartvanezinge', {
+    url: '/hartvanezinge',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/schools/hartvanezinge.html'
+      }
+    }
+  })
+
+  .state('app.sportschool', {
+    url: '/sportschool',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/schools/sportschool.html'
       }
     }
   })
@@ -72,14 +119,17 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
     }
   })
 
-  .state('app.lyceum', {
-    url: '/lyceum',
+  .state('app.tl', {
+    url: '/opleidingen/tl',
     views: {
       'menuContent': {
-        templateUrl: 'templates/schools/lyceum.html'
+        templateUrl: 'templates/opleidingen/tl.html',
+        controller: 'AppCtrl'
       }
     }
   })
+
+
 
   .state('app.about', {
     url: '/about',
