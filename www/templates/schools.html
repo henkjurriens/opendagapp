@@ -9,6 +9,36 @@
       <button class="button button-block button-big bg-roze" ui-sref="app.sportschool">Sportschool</button>
     </div>
 
+    <div class="list" ng-controller="MockBeaconController">
+      <button ng-click="goRoom()">MediaLab</button>
+
+    </div>
+
+
+
+    <div class="list" ng-controller="BeaconController">
+            <div class="item" ng-repeat="(key, value) in beacons">
+                <div class="row">
+                    <div class="col truncate">
+                        {{value.uuid}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        major: {{value.major}}
+                    </div>
+                    <div class="col">
+                        minor: {{value.minor}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        {{value.proximity}}
+                    </div>
+                </div>
+            </div>
+    </div>
+
   </ion-content>
 
 

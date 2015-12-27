@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
+angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 'ngCordovaBeacon'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -19,6 +19,8 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+  //$cordovaBeacon.createBeaconRegion("estimote", "b9407f30-f5f8-466e-aff9-25556b57fe6d");
   });
 })
 
@@ -129,13 +131,119 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
     }
   })
 
-
-
   .state('app.about', {
     url: '/about',
     views: {
       'menuContent': {
         templateUrl: 'templates/about.html'
+      }
+    }
+  })
+
+  .state('app.stadenesch', {
+    url: '/stadenesch',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/stadenesch.html'
+      }
+    }
+  })
+
+  .state('app.peter', {
+    url: '/visies/peter',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/visies/peter.html'
+      }
+    }
+  })
+
+  .state('app.doro', {
+    url: '/visies/doro',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/visies/doro.html'
+      }
+    }
+  })
+
+  .state('app.hugo', {
+    url: '/visies/hugo',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/visies/hugo.html'
+      }
+    }
+  })
+
+  .state('app.boris', {
+    url: '/leerlingen/boris',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/leerlingen/boris.html'
+      }
+    }
+  })
+
+  .state('app.friso', {
+    url: '/leerlingen/friso',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/leerlingen/friso.html'
+      }
+    }
+  })
+
+  .state('app.maaike', {
+    url: '/leerlingen/maaike',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/leerlingen/maaike.html'
+      }
+    }
+  })
+
+  .state('app.sanne', {
+    url: '/leerlingen/sanne',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/leerlingen/sanne.html'
+      }
+    }
+  })
+
+  .state('app.nieuwestart', {
+    url: '/nieuwestart',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/nieuwestart.html'
+      }
+    }
+  })
+
+  .state('app.medialab', {
+    url: '/lokalen/medialab',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/lokalen/medialab.html'
+      }
+    }
+  })
+
+  .state('app.theater', {
+    url: '/lokalen/theater',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/lokalen/theater.html'
+      }
+    }
+  })
+
+  .state('app.muziek', {
+    url: '/lokalen/muziek',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/lokalen/muziek.html'
       }
     }
   })
@@ -147,35 +255,10 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
         templateUrl: 'templates/update.html'
       }
     }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
   });
+
+
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/schools');
 });

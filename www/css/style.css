@@ -49,3 +49,57 @@ a:hover {
 .bg-roze {
    background : #f19eb1;
 }
+
+.card-blue {
+  background :#8cc3e9;
+  color : black !important;
+  box-shadow: none;
+}
+
+.card-blue h2 {
+  font-weight:  bold;
+
+}
+.card-blue p {
+  color : black;
+  margin-top : 5px;
+}
+
+.card-white {
+  background :white;
+  color : black !important;
+  box-shadow: none;
+}
+
+.card-white h2 {
+  font-weight:  bold;
+
+}
+.card-white p {
+  color : black;
+  margin-top : 15px;
+}
+
+.text-gold {
+  color : #e0d09f;
+}
+
+.bg-gold {
+  background-color : #e0d09f;
+}
+
+.text-goldenrod {
+  color : #c79b2c;
+}
+
+.bg-goldenrod {
+  background-color: #c79b2c;
+}
+
+.text-skyblue {
+  color : #6fc7da;
+}
+
+.bg-skyblue {
+  background-color: #6fc7da;
+}

@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngCordovaBeacon'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -12,13 +12,6 @@ angular.module('starter.controllers', [])
   // Form data for the login modal
   var deploy = new Ionic.Deploy();
   $scope.loginData = {};
-
-  // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
@@ -44,22 +37,41 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
 
 .controller('OpleidingenCtrl', function($scope, $location, $stateParams) {
   $scope.go = function(opleiding) {
     console.log('click');
     $location.url(opleiding);
   }
+})
+
+.controller("MockBeaconController", function($scope, $rootScope, $location) {
+  $scope.goRoom = function() {
+    console.log('goto room');
+    $location.url("app/lokalen/medialab");
+  }
+})
+
+.controller("BeaconController", function($scope, $rootScope, $ionicPlatform, $cordovaBeacon) {
+
+    $scope.beacons = {};
+
+    $ionicPlatform.ready(function() {
+
+        $cordovaBeacon.requestWhenInUseAuthorization();
+
+        $rootScope.$on("$cordovaBeacon:didRangeBeaconsInRegion", function(event, pluginResult) {
+            var uniqueBeaconKey;
+            for(var i = 0; i < pluginResult.beacons.length; i++) {
+                uniqueBeaconKey = pluginResult.beacons[i].uuid + ":" + pluginResult.beacons[i].major + ":" + pluginResult.beacons[i].minor;
+                $scope.beacons[uniqueBeaconKey] = pluginResult.beacons[i];
+            }
+            $scope.$apply();
+        });
+
+        $cordovaBeacon.startRangingBeaconsInRegion($cordovaBeacon.createBeaconRegion("estimote", "b9407f30-f5f8-466e-aff9-25556b57fe6d"));
+
+    });
 })
 
 .controller('UpdateCtrl', function($scope) {
